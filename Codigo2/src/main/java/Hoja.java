@@ -5,6 +5,13 @@ public class Hoja {
 	private int numero;
 	private String estadoHoja;
 
+	public Hoja(Cuaderno cuaderno, String apunte, int numero, String estadoHoja) {
+		this.cuaderno = cuaderno;
+		this.apunte = apunte;
+		this.numero = numero;
+		this.estadoHoja = estadoHoja;
+	}
+
 	public String getApunte() {
 
 		return this.apunte;
