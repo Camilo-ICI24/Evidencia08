@@ -23,17 +23,24 @@ public class Cuaderno {
 	 * @param texto
 	 */
 	public boolean escribirApunte(int hoja, String texto) {
-		// TODO - implement Cuaderno.escribirApunte
-		throw new UnsupportedOperationException();
+		for(Hoja hoja1: hojas){
+			if(hoja1.getNumero() == hoja){
+				hoja1.apuntar(texto);
+				if(hoja1.getApunte().equals(texto)){
+					return true;
+				}
+			}
+		}return false;
 	}
 
-	/**
-	 * 
-	 * @param hoja
-	 */
 	public boolean quitarHoja(int hoja) {
-		// TODO - implement Cuaderno.quitarHoja
-		throw new UnsupportedOperationException();
+		for(Hoja hoja1: hojas){
+			if(hoja1.getNumero() == hoja){
+				if(hoja1.arrancarHoja()){
+					return true;
+				}
+			}
+		}return false;
 	}
 
 }
